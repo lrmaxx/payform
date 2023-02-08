@@ -1,0 +1,1180 @@
+<!-- 
+    File name       :     Payment.html
+    Developed by    :     Arpan Jain
+    Date of origin  :     5/6/2023
+    Last Edit       :     455 line
+    
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <title>Payment
+    </title>
+</head>
+
+<body>
+    <nav class="navbar bg-light p-0 ">
+        <div class="container  ms-0 me-0">
+            <a class="navbar-brand" href="legalraasta.com">
+                <img src="logo.jpg" alt="Bootstrap" width="200" height="90">
+            </a>
+        </div>
+    </nav>
+    <div class="d-flex  flex-column-reverse flex-lg-row gap-4  w-100  border border-1 p-5"
+        style="border-style:outset;background: #eff0f2;">
+        <div class="col-lg-8 col-12 p-2 bg-light">
+            <!-- Payment Details  -->
+            <div class="col-xl-12">
+                <h2 class="mb-4 fs-4 fw-bold">Payment Options</h2>
+                <div class="m-auto pe-2 row">
+                    <div class="col-xl-4 col-lg-5 col-md-12 ps-2 rounded-1">
+                        <div class="flex-column nav nav-pills" role="tablist">
+                            <div class="nav-item rounded-1 active">
+                                <a href="#" role="tab" data-rb-event-key="upi" id="defaultOpen"
+                                    aria-controls="left-tabs-example-tabpane-upi" aria-selected="false"
+                                    class="d-flex align-items-center px-1 py-3 nav-link "
+                                    onclick="tabchange(event,'upi')">
+
+                                    <div class="me-3  " style="width: 30px;height: 30px;">
+                                        <span class="d-inline-block position-relative mw-100">
+                                            <span>
+                                                <img alt="" aria-hidden="true" src="download.svg"
+                                                    class="d-block mw-100 position-relative">
+                                            </span>
+                                            <img alt="payment-option-icon" src="upi-blue.svg" decoding="async"
+                                                data-nimg="intrinsic"
+                                                class="position-absolute p-0 m-0 border-0 mw-100 mh-100"
+                                                style="inset: 0px;  min-width: 100%;  min-height: 100%; ">
+                                        </span>
+                                    </div>
+
+                                    <div class="payment-mode-details ml-4">
+                                        <h4 class="fs-5 ">UPI</h4>
+                                        <div class="upi-small-images">
+                                            <span>
+                                                <span>
+                                                    <span class="mw-100 d-inline-block position-relative">
+                                                        <span class=" d-block m-0 p-0 opacity-100 ">
+                                                            <img alt="" aria-hidden="true"
+                                                                class="d-block mw-100 border-0 m-0 p-0 "
+                                                                src="download.svg">
+                                                        </span>
+                                                        <img class="d-block mw-100 mh-100 position-absolute"
+                                                            src="payment-gpaycircle.svg" decoding="async"
+                                                            data-nimg="intrinsic"
+                                                            style=" inset: 0px; min-width: 100%;  min-height: 100%; ;">
+                                                    </span>
+                                                </span>
+                                                <span>
+                                                    <span>
+                                                        <span class="mw-100 d-inline-block position-relative">
+                                                            <span class=" d-block m-0 p-0 opacity-100 ">
+                                                                <img alt="" aria-hidden="true"
+                                                                    class="d-block mw-100 border-0 m-0 p-0 "
+                                                                    src="download.svg">
+                                                            </span>
+                                                            <img class="d-block mw-100 mh-100 position-absolute"
+                                                                src="phonepe-new (1).svg" decoding="async"
+                                                                data-nimg="intrinsic"
+                                                                style=" inset: 0px; min-width: 100%;  min-height: 100%; ;">
+                                                        </span>
+                                                    </span>
+
+                                                    <span>
+                                                        <span class="mw-100 d-inline-block position-relative">
+                                                            <span class=" d-block m-0 p-0 opacity-100 ">
+                                                                <img alt="" aria-hidden="true"
+                                                                    class="d-block mw-100 border-0 m-0 p-0 "
+                                                                    src="download.svg">
+                                                            </span>
+                                                            <img class="d-block mw-100 mh-100 position-absolute"
+                                                                src="payment-paymtmcircle.svg" decoding="async"
+                                                                data-nimg="intrinsic"
+                                                                style=" inset: 0px; min-width: 100%;  min-height: 100%; ;">
+                                                        </span>
+                                                    </span>
+                                                    &amp; more
+                                                </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="nav-item"><a href="#" role="tab" data-rb-event-key="card"
+                                    id="left-tabs-example-tab-card" aria-controls="left-tabs-example-tabpane-card"
+                                    aria-selected="true" class="d-flex align-items-center px-1 py-3 nav-link "
+                                    onclick="tabchange(event,'card')">
+                                    <div class="me-3  " style="width: 30px;height: 30px;">
+                                        <span class="d-inline-block position-relative mw-100">
+                                            <span>
+                                                <img alt="" aria-hidden="true" src="download.svg"
+                                                    class="d-block mw-100 position-relative">
+                                            </span>
+                                            <img alt="payment-option-icon" src="payment-card-desktop.svg"
+                                                decoding="async" data-nimg="intrinsic"
+                                                class="position-absolute p-0 m-0 border-0 mw-100 mh-100"
+                                                style="inset: 0px;  min-width: 100%;  min-height: 100%; ">
+                                        </span>
+                                    </div>
+
+                                    <div class="payment-mode-details ml-4">
+                                        <h4 class="fs-5">Credit/Debit Card</h4>
+                                        <div class="">
+                                            <small class="m-0 ">Visa, MasterCard, Rupay &amp; more</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="nav-item">
+                                <a href="#" role="tab" data-rb-event-key="netbanking"
+                                    id="left-tabs-example-tab-netbanking "
+                                    aria-controls="left-tabs-example-tabpane-netbanking" aria-selected="false"
+                                    class="d-flex align-items-center px-1 py-3 nav-link"
+                                    onclick="tabchange(event ,'netbank')">
+                                    <div class="me-3  " style="width: 30px;height: 30px;">
+                                        <span class="d-inline-block position-relative mw-100">
+                                            <span>
+                                                <img alt="" aria-hidden="true" src="download.svg"
+                                                    class="d-block mw-100 position-relative">
+                                            </span>
+                                            <img alt="payment-option-icon" src="net-banking-blue.svg" decoding="async"
+                                                data-nimg="intrinsic"
+                                                class="position-absolute p-0 m-0 border-0 mw-100 mh-100"
+                                                style="inset: 0px;  min-width: 100%;  min-height: 100%; ">
+                                        </span>
+                                    </div>
+
+                                    <div class="payment-mode-details ml-4">
+                                        <h4 class="fs-5 ">Net Banking</h4>
+                                        <div class="">
+                                            <small class="m-0 ">Pay using all Indian banks</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- nav items over -->
+                        </div>
+                    </div>
+                    <!-- Left panel Over -->
+
+                    <!-- Right Panel start -->
+                    <div class=" col-xl-8 px-xl-5 ps-lg-3 pe-lg-3  col-sm-7">
+                        <div class="tab-content">
+                            <div id="card" aria-labelledby="left-tabs-example-tab-card" role="tabpanel"
+                                aria-hidden="false" class="fade tab-pane">
+                                <form action="#" id="new_payment_page_cardDetails_form" autocomplete="off">
+                                    <div class="d-flex flex-column mb-3 gap-2 position-relative">
+                                        <div class="d-flex flex-column position-relative flex-grow-1 mb-3">
+                                            <label class="fw-bold">Card
+                                                Number</label>
+                                            <div class="d-flex align-items-center border border-2 rounded-2"><input
+                                                    name="cardNumber" required id="new-payment-cardNumberField"
+                                                    class="w-100 p-2 border-0" inputmode="numeric"
+                                                    placeholder="Enter Card Number" value="">
+                                                <div class="cardType"></div>
+                                            </div>
+                                            <div class="errorMessages p-1 fs-6">sadfasd</div>
+                                        </div>
+                                        <div class="d-flex flex-nowrap w-100 gap-3">
+                                            <div class="d-flex flex-column position-relative flex-grow-1 "><label
+                                                    class="fw-bold ">Expiry (Month /
+                                                    Year)</label>
+                                                <div class="d-flex align-items-center border border-2 rounded-2 "><input
+                                                        type="month" name="cardExpiry" id="new-payment-cardExpiryDate"
+                                                        class="w-100 border-0 p-2 
+                                                        " inputmode="numeric" placeholder="MM / YY" value="">
+                                                </div>
+                                                <div class="error-message p-1 fs-6"></div>
+                                            </div>
+                                            <div class="d-flex  flex-column  col-6 rounded-2">
+                                                <label class="d-flex align-items-center">
+                                                    <span class="me-1 fw-bold">CVV</span>
+                                                    <span
+                                                        class="d-inline-block overflow-hidden border-0 m-0 p-0 position-relative mw-100">
+                                                        <span class="d-block border-0 m-0 p-0 mw-100 opacity-100">
+                                                            <img alt="" aria-hidden="true"
+                                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27370%27%20height=%2733%27/%3e"
+                                                                class="d-block mw-100 m-0 b-0 position-relative">
+                                                        </span>
+                                                        <img alt="CVV" src="payment-question.svg"
+                                                            class="position-absolute border-0 m-0 p-0 mw-100 mh-100"
+                                                            decoding="async" data-nimg="intrinsic"
+                                                            style="inset: 0px; max-width: 100%; min-height: 100%; ">
+                                                    </span>
+                                                </label>
+                                                <div class=" d-flex align-items-center border border-2 rounded-2 ">
+                                                    <input name="cardCVV" id="new-payment-cardCVV"
+                                                        class="w-100 p-2 border border-0" type="password"
+                                                        inputmode="numeric" placeholder="Enter CVV" value="">
+                                                </div>
+                                                <div class="errorMessages p-1 fs-6"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class=" w-100 p-2 fw-bold rounded ">PAY
+                                        ₹99</button>
+                                </form>
+                                <div class="d-flex justify-content-center mb-3 mt-5"><span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                            style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                alt="" aria-hidden="true"
+                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27370%27%20height=%2733%27/%3e"
+                                                style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                            alt="payment-service-providers"
+                                            srcset="https://assets.vakilsearch.com/assets/payment/payment-serviceproviders.svg 1x, https://assets.vakilsearch.com/assets/payment/payment-serviceproviders.svg 2x"
+                                            src="https://assets.vakilsearch.com/assets/payment/payment-serviceproviders.svg"
+                                            decoding="async" data-nimg="intrinsic"
+                                            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
+                                </div>
+                            </div>
+                            <div id="upi" aria-labelledby="left-tabs-example-tab-upi" role="tabpanel"
+                                aria-hidden="false" class="fade tab-pane ">
+                                <div class="payment_page_upi">
+                                    <div class="upi-list ">
+                                        <div class="">
+                                            <div class="">
+                                                <div class="border border-1  border-upi" style="border-color: #caced1;">
+                                                    <label id="gpay_block" for="gpay"
+                                                        class=" d-flex flex-row p-3 bg-light m-0">
+                                                        <div>
+                                                            <input id="gpay" class="payment-radio" style="position: relative;
+                                                            top: 17px;
+                                                            margin-right: 23px;" onclick="shown(event,'gpay_data')"
+                                                                type="radio" name="options">
+                                                        </div>
+                                                        <div class="d-flex flex-column w-100">
+                                                            <div class="d-flex" style="margin-bottom: 10px;">
+                                                                <span
+                                                                    class="d-inline-block border-0 m-0 p-0 opacity-100 position-relative mw-100 overflow-hidden">
+                                                                    <span
+                                                                        class="d-block border-0 m-0 opacity-100 p-0 mw-100">
+                                                                        <img alt="" aria-hidden="true"
+                                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2750%27%20height=%2750%27/%3e"
+                                                                            class="d-block mw-100 border-0 m-0 p-0 opacity-100">
+                                                                    </span>
+                                                                    <img alt="payment-option" src="gpay-grey (1).svg"
+                                                                        decoding="async" data-nimg="intrinsic"
+                                                                        class="position-absolute m-auto d-block border-0 p-0 mw-100 mh-100"
+                                                                        style="inset: 0px;"><noscript></noscript></span>
+                                                                <div
+                                                                    class="d-flex justify-content-center align-content-center flex-column">
+                                                                    <h4 class="fs-5">Google Pay</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div id="gpay_data" aria-labelledby="payment-option gpay"
+                                                                role="option" aria-hidden="false"
+                                                                class="pay-ops d-none">
+                                                                <p class="text-start mb-2 text-secondary">Pay through
+                                                                    the GooglePay
+                                                                    app on your phone</p>
+                                                                <input type="tel" name="telephone"
+                                                                    placeholder="Enter Your number" required
+                                                                    class="  p-2 mb-3 w-100 border-1 rounded-1 ">
+                                                                <button id="gpay_btn" type="button"
+                                                                    class="w-100 bg-warning fw-bold p-2 rounded border-0 ">PAY
+                                                                    ₹99</button>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div class="border border-1  border-upi" style="border-color: #caced1;">
+                                                    <label id="paytm_block" for="paytm"
+                                                        class=" d-flex flex-row p-3 bg-light m-0">
+                                                        <div>
+                                                            <input id="paytm" class="payment-radio" style="position: relative;
+                                                            top: 17px;
+                                                            margin-right: 23px;" onclick="shown(event,'paytm_data')"
+                                                                type="radio" name="options">
+                                                        </div>
+                                                        <div class="d-flex flex-column w-100">
+                                                            <div class="d-flex" style="margin-bottom: 10px;">
+                                                                <span
+                                                                    class="d-inline-block border-0 m-0 p-0 opacity-100 position-relative mw-100 overflow-hidden">
+                                                                    <span
+                                                                        class="d-block border-0 m-0 opacity-100 p-0 mw-100">
+                                                                        <img alt="" aria-hidden="true"
+                                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2750%27%20height=%2750%27/%3e"
+                                                                            class="d-block mw-100 border-0 m-0 p-0 opacity-100">
+                                                                    </span>
+                                                                    <img alt="payment-option"
+                                                                        src="payment-paymtmcircle (1).svg"
+                                                                        decoding="async" data-nimg="intrinsic"
+                                                                        class="position-absolute m-auto d-block border-0 p-0 mw-100 mh-100"
+                                                                        style="inset: 0px;">
+                                                                </span>
+                                                                <div
+                                                                    class="ps-2 d-flex justify-content-center align-content-center flex-column">
+                                                                    <h4 class="fs-5">Paytm</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div id="paytm_data" aria-labelledby="payment-option gpay"
+                                                                role="option" aria-hidden="false"
+                                                                class="pay-ops d-none">
+                                                                <p class="text-start text-secondary mb-2">Pay through
+                                                                    the Paytm
+                                                                    app on your phone</p>
+                                                                <button id="paytm_btn" type="button"
+                                                                    class="w-100 bg-warning fw-bold p-2 rounded border-0 ">PAY
+                                                                    ₹99</button>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="border border-1  border-upi" style="border-color: #caced1;">
+                                                    <label id="phonepe_block" for="phonepe"
+                                                        class=" d-flex flex-row p-3 bg-light m-0">
+                                                        <div><input id="phonepe" class="payment-radio" style="position: relative;
+                                                            top: 17px;
+                                                            margin-right: 23px;" onclick="shown(event,'phonpe_data')"
+                                                                type="radio" name="options"></div>
+                                                        <div class="d-flex flex-column w-100">
+                                                            <div class="d-flex" style="margin-bottom: 10px;">
+                                                                <span
+                                                                    class="d-inline-block border-0 m-0 p-0 opacity-100 position-relative mw-100 overflow-hidden">
+                                                                    <span
+                                                                        class="d-block border-0 m-0 opacity-100 p-0 mw-100">
+                                                                        <img alt="" aria-hidden="true"
+                                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2750%27%20height=%2750%27/%3e"
+                                                                            class="d-block mw-100 border-0 m-0 p-0 opacity-100">
+                                                                    </span>
+                                                                    <img alt="payment-option" src="phonepe-new (1).svg"
+                                                                        decoding="async" data-nimg="intrinsic"
+                                                                        class="position-absolute m-auto d-block border-0 p-0 mw-100 mh-100"
+                                                                        style="inset: 0px;"><noscript></noscript></span>
+                                                                <div
+                                                                    class="d-flex justify-content-center align-content-center flex-column">
+                                                                    <h4 class="fs-5">Phone Pe</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div id="phonpe_data" aria-labelledby="payment-option gpay"
+                                                                role="option" aria-hidden="false"
+                                                                class="pay-ops d-none">
+                                                                <p class="text-start text-secondary mb-2">Pay through
+                                                                    the Phonepe
+                                                                    app on your phone</p>
+                                                                <button id="phonepe_btn" type="button"
+                                                                    class="w-100 bg-warning fw-bold p-2 rounded border-0 ">PAY
+                                                                    ₹99</button>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="border border-1  border-upi" style="border-color: #caced1;">
+                                                    <label id="BHIM_block" for="bhim"
+                                                        class=" d-flex flex-row p-3 bg-light m-0"
+                                                        onclick="shown(event,'bhim_data')">
+                                                        <div><input id="bhim" class="payment-radio" style="position: relative;
+                                                            top: 17px;
+                                                            margin-right: 23px;" type="radio" name="options"></div>
+                                                        <div class="d-flex flex-column w-100">
+                                                            <div class="d-flex" style="margin-bottom: 10px;">
+                                                                <span
+                                                                    class="d-inline-block border-0 m-0 p-0 opacity-100 position-relative mw-100 overflow-hidden">
+                                                                    <span
+                                                                        class="d-block border-0 m-0 opacity-100 p-0 mw-100">
+                                                                        <img alt="" aria-hidden="true"
+                                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2750%27%20height=%2750%27/%3e"
+                                                                            class="d-block mw-100 border-0 m-0 p-0 opacity-100">
+                                                                    </span>
+                                                                    <img alt="payment-option"
+                                                                        src="payment-upi-desktop.svg" decoding="async"
+                                                                        data-nimg="intrinsic"
+                                                                        class="position-absolute m-auto d-block border-0 p-0 mw-100 mh-100"
+                                                                        style="inset: 0px;"><noscript></noscript></span>
+                                                                <div
+                                                                    class="d-flex justify-content-center align-content-center flex-column">
+                                                                    <h4 class="fs-5">Enter UPI ID</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div id="bhim_data" aria-labelledby="payment-option gpay"
+                                                                role="option" aria-hidden="false"
+                                                                class="d-none pay-ops">
+                                                                <p class="text-start text-secondary mb-2">Use BHIM UPI
+                                                                    app to Pay
+                                                                </p>
+                                                                <input type="text" name="UPI" placeholder="Enter UPI ID"
+                                                                    required
+                                                                    class="  p-2 mb-3 w-100 border-1 rounded-1 ">
+                                                                <button id="bhim_btn" type="button"
+                                                                    class="w-100 bg-warning fw-bold p-2 rounded border-0 ">PAY
+                                                                    ₹99</button>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="netbank" aria-labelledby="left-tabs-example-tab-netbanking " role="tabpanel"
+                                aria-hidden="true" class="fade tab-pane ">
+                                <div class="internet-banking">
+                                    <div class="payment_page_netbanking">
+
+                                        <div class="searchbox_bank pt-3" style="margin-bottom: 16px;">
+                                            <div
+                                                class="input-group position-relative d-flex flex-wrap align-items-stretch w-100">
+                                                <input placeholder="Find your bank" onkeyup="myFunction()" id="myInput"
+                                                    class="position-relative flex-grow-1 flex-shrink-1 mb-0 p-2 ">
+                                            </div>
+                                        </div>
+
+                                        <div style="margin-bottom: 16px;">
+                                            <ul class="list-unstyled" id="myUL"
+                                                style="max-height: 300px; overflow: auto; margin: 0px -1rem 1rem -1rem">
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;" for="SBIB">
+                                                    <li class="w-100">
+                                                        <a href="" class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/assets/payment/payment_sbi_bank.svg">
+                                                            SBI
+                                                        </a>
+                                                        <input type="radio" class="p-0 float-end"
+                                                            style="box-sizing: border-box;" name="bank"
+                                                            onclick="getCheckedRadioValue()" id="SBIB">
+                                                    </li>
+                                                </label>
+
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100">
+                                                        <a href="" class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/assets/payment/payment_hdfc_bank.svg">HDFC
+                                                        </a>
+                                                        <input type="radio" class="p-0 float-end" name="bank"
+                                                            onclick="getCheckedRadioValue()" id="HDFB">
+                                                    </li>
+                                                </label>
+
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""
+                                                            class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/assets/payment/payment-iciciicon.svg">ICICI
+
+                                                        </a></li>
+                                                    <input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="ICIB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""
+                                                            class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/assets/payment/payment_axis_bank.svg">AXIS
+
+                                                        </a></li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="AXIB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""
+                                                            class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/yesb.svg">YES
+                                                            Bank
+
+                                                        </a></li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="YESB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""
+                                                            class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/ubibc.svg">Union
+                                                            Bank of India -Corporate Bank
+
+                                                        </a></li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="UBIBC">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""
+                                                            class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/ubibc.svg">Union
+                                                            Bank of India
+
+                                                        </a></li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="UBIB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""
+                                                            class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/indb.svg">INDIAN
+                                                            Bank
+
+                                                        </a></li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="INDB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""
+                                                            class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/krvb.svg">Karur
+                                                            Vysya Bank
+                                                        </a>
+
+                                                    </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="KRVB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/162b.svg">KOTAK
+                                                            Mahindra Bank
+                                                    </a>
+                                                    </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="162B">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Indusland
+                                                            Bank
+                                                        
+                                                    </a></li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="INIB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/idbb.svg">IDBI
+                                                            Bank
+                                                        
+                                                    </a></li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="IDBB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Union
+                                                            Bank of India (Erstwhile Corporation Bank)
+                                                    </a>                            </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="CRPB">
+                                                </label>
+
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/krkb.svg">Karnataka
+                                                            Bank
+                                                    </a> </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="KRKB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/soib.svg">South
+                                                            Indian
+                                                        
+                                                    </a>    Bank
+
+                                                    </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="SOIB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/soib.svg">Jammu
+                                                            &amp; Kashmir Bank
+                                                    </a>     </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="JAKB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">DCB
+                                                            Bank
+                                                    </a> </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="DCBB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/inob.svg">Indian
+                                                            Overseas Bank
+                                                    </a>  </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="INDB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/boib.svg">Bank
+                                                            of India
+                                                    </a> </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="BIOB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/bomb.svg">Bank
+                                                            of Maharashtra
+                                                    </a>
+                                                    </li><input type="radio" class="p-0 " name="bank"
+                                                        onclick="getCheckedRadioValue()" id="BOMB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Federal
+                                                            Bank
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="FEDB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href="" class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/csbn.svg">Catholic
+                                                            Syrian Bank
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="CSBN">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">PNB
+                                                            (Erstwhile-United Bank of India)
+                                                    </a></li><input type="radio"
+                                                        name="bank" onclick="getCheckedRadioValue()" id="UNIB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href="">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/dshb.svg">Deutsche
+                                                            Bank
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="DSHB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/cbib.svg">Central
+                                                            Bank Of India
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="CBIB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/cabb.svg">Canara
+                                                            Bank
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="CABB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/adbb.svg">Union
+                                                            Bank of India (Erstwhile Andhra Bank)
+                                                    </a></li><input type="radio"
+                                                        name="bank" onclick="getCheckedRadioValue()" id="ADBB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Karur
+                                                            Vysya - Corporate Banking
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="KRVBC">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Dhanlaxmi
+                                                            Bank - Retail
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="DLSB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <a href=""  class="float-start text-decoration-none text-dark">
+                                                        <li class="w-100"><img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Saraswat
+                                                            Bank</li>
+                                                    </a><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="SRSWT">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <a href=""  class="float-start text-decoration-none text-dark">
+                                                        <li class="w-100"><img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/pnbb.svg">Punjab
+                                                            National Bank</li>
+                                                    </a><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="PNBB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/pnbb.svg">Punjab
+                                                            National Bank - Corporate Banking
+                                                    </a></li><input type="radio"
+                                                        name="bank" onclick="getCheckedRadioValue()" id="CPNB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Syndicate
+                                                            Bank
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="SYNDB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">UCO
+                                                            Bank
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="UCOB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=" "  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/obcb.svg">PNB
+                                                            (Erstwhile -Oriental Bank of Commerce)
+                                                    </a></li><input type="radio"
+                                                        name="bank" onclick="getCheckedRadioValue()" id="OBCB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/obcb.svg">PNB
+                                                            (Erstwhile -Oriental Bank of Commerce)
+                                                    </a></li><input type="radio"
+                                                        name="bank" onclick="getCheckedRadioValue()" id="OBCB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Tamilnad
+                                                            Mercantile Bank
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="TMBB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><img style="margin-right: 19px; max-width: 100%;"
+                                                            src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Lakshmi
+                                                        Vilas Bank</li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="LVRB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/obcb.svg">PNB
+                                                            (Erstwhile -Oriental Bank of Commerce)
+                                                    </a></li><input type="radio"
+                                                        name="bank" onclick="getCheckedRadioValue()" id="OBCB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <a href=""  class="float-start text-decoration-none text-dark">
+                                                        <li class="w-100"><img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Cosmos
+                                                            Bank</li>
+                                                    </a><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="CSMSNB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100">
+                                                        <a href=""  class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Janata
+                                                            Sahakari Bank Pune
+                                                        </a>
+                                                    </li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="JSBNB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100">
+                                                        <a href=""  class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Shamrao
+                                                            Vithal Co-operative Bank Ltd.
+                                                        </a>
+                                                    </li>
+                                                    <input type="radio"
+                                                        name="bank" onclick="getCheckedRadioValue()" id="SVCNB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100">
+                                                        <a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">Punjab
+                                                            &amp; Sind Bank
+                                                    </a>
+                                                </li>
+                                                <input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="PSBNB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100">
+                                                        <a href=""  class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">The
+                                                            Nainital Bank
+                                                        </a>
+                                                    </li>
+                                                    <input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="TBON">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100">
+                                                        <a href=""  class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/denn.svg">Dena
+                                                            Bank
+                                                        </a>
+                                                    </li>
+                                                    <input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="DENN">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/denn.svg">Dena
+                                                            Bank
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="DENN">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/airnb.svg">Airtel
+                                                            Payments Bank
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="AIRNB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                        <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/axis.svg">Axis
+                                                            Corporate Netbanking
+                                                    </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="AXISCNB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100"><a href=""  class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/bankicons/scbl.svg">Standard
+                                                            Chartered Bank
+                                                        </a></li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="SCBNB">
+                                                </label>
+                                                <label
+                                                    class="px-3  d-flex justify-content-between align-items-center p-3 border-bottom-1 "
+                                                    style="cursor: pointer; font-size: 16px;">
+                                                    <li class="w-100">
+                                                        <a href=""   class="float-start text-decoration-none text-dark">
+                                                            <img style="margin-right: 19px; max-width: 100%;"
+                                                                src="https://assets.vakilsearch.com/live-images/paymenticons/other-banks.svg">
+                                                                BOB Corporate
+                                                        </a>
+                                                    </li><input type="radio" name="bank"
+                                                        onclick="getCheckedRadioValue()" id="BBCB">
+                                                </label>
+                                            </ul>
+                                        </div>
+                                        <button id="btb" type="button" class="fw-bold mb-4 w-100  text-black mode">PAY
+                                            ₹99</button>
+                                        <style>
+                                            .mode {
+                                                border-radius: 5px;
+                                                border: none;
+                                                font-size: 16px;
+                                                background-color: #caced1;
+                                                padding: 10px 7px;
+                                            }
+                                        </style>
+                                    </div>
+                                    <script>
+                                        function getCheckedRadioValue() {
+                                            document.getElementById("btb").style = "background-color:yellow";
+                                            // return value of checked radio or undefined if none checked
+                                        }
+
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .nav-link:hover {
+                background-color: #ccc;
+                color: black
+            }
+        </style>
+        <script>
+            function tabchange(event, paymeth) {
+
+                var i, tabcontent, tablink;
+                tabcontent = document.getElementsByClassName("tab-pane")
+                console.log(tabcontent);
+
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].classList.remove("active", "show");
+
+                }
+                tablinks = document.getElementsByClassName("nav-link");
+                console.log(tablinks)
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(paymeth).classList.add("active", "show");
+                event.currentTarget.className += " active";
+
+            }
+            function shown(event, options) {
+
+                var i, shown, showndetail;
+                shown = document.getElementsByClassName("pay-ops");
+                for (i = 0; i < shown.length; i++) {
+                    shown[i].classList.add("d-none");
+                }
+                console.log(options)
+                document.getElementById(options).classList.remove('d-none');
+            }
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    console.log(a)
+
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].parentElement.style = "";
+                    } else {
+                        li[i].parentElement.style = "display :none !important";
+
+                    }
+                }
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
+
+        <!-- Payment Left Side Panel  -->
+        <div class="col-lg-4 col-12 p-2 bg-light">
+            <div class="container-fluid">
+                <div class="col-12">
+                    <p class="fs-4 fw-bold text-info"><img src="pvt-payment-exp-header.svg" alt="Pvt header">
+                        PVT Registration</p>
+                </div>
+                <div class="">
+                    <p class="fw-bold" style="font-size:1.12rem">Our experts register 1 company every 9 mins</p>
+                    <div class="d-flex justify-content-between gap-2">
+                        <ul class="list-unstyled">
+                            <li>
+                                <p><span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                            style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                alt="" aria-hidden="true"
+                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2716%27%20height=%2716%27/%3e"
+                                                style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                            srcset="https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg 1x, https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg 2x"
+                                            src="https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg"
+                                            decoding="async" data-nimg="intrinsic" class="styles_pointsImg__VTw9o"
+                                            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
+                                    Name Reservation Help</p>
+                            </li>
+                            <li>
+                                <p> <span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                            style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                alt="" aria-hidden="true"
+                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2716%27%20height=%2716%27/%3e"
+                                                style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                            srcset="https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg 1x, https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg 2x"
+                                            src="https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg"
+                                            decoding="async" data-nimg="intrinsic" class="styles_pointsImg__VTw9o"
+                                            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
+                                    Avoid MCA Rejection</p>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li>
+                                <p><span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                            style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                alt="" aria-hidden="true"
+                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2716%27%20height=%2716%27/%3e"
+                                                style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                            srcset="https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg 1x, https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg 2x"
+                                            src="https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg"
+                                            decoding="async" data-nimg="intrinsic" class="styles_pointsImg__VTw9o"
+                                            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
+                                    Name Reservation Help</p>
+                            </li>
+                            <li>
+                                <p><span
+                                        style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                            style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                alt="" aria-hidden="true"
+                                                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2716%27%20height=%2716%27/%3e"
+                                                style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                            srcset="https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg 1x, https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg 2x"
+                                            src="https://assets.vakilsearch.com/live-images/tick-pvt-payment-exp.svg"
+                                            decoding="async" data-nimg="intrinsic" class="styles_pointsImg__VTw9o"
+                                            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
+                                    7 day Incorporation</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="payment-price-details my-3 py-2 px-3  border-radius">
+                    <div class="styles_priceDetailsSectionNew__JtzkN">
+                        <p class="fs-5 fw-bold">Price Details</p>
+                        <hr>
+                        <div class="d-flex justify-content-between w-100">
+                            <p>Consultation Fee (GST incl)</p>
+                            <p class="">₹499</p>
+                        </div>
+                        <div class="d-flex flex-column w-100  border: 3px outset #d8f1d7; ">
+                            <div class="d-flex justify-content-between " style="background-color:#d8f1d7;">
+                                <label class="">
+                                    <span class="fs-6 fw-bold">MAKEININDIA</span> coupon
+                                    <small class=" p-1 fw-bold"
+                                        style="color: #5bb837; border:1px solid #5bb837; border-radius: 5px;">Applied</small></label>
+                                <p class="ps-2 py-2 me-0 fw-semibold"> <span>-</span>₹400</p>
+                            </div>
+                            <div class="fs-6 fw-semibold" style="background: #d8f1d7;"><img src="offer-label.svg"
+                                    alt="offer label"><small>Coupon expires today</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="fs-5 fw-bold">Total Amount</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="text-success fs-5 fw-bolder "> ₹99 &nbsp; </p>
+                            <p class="text-secondary fs-5 fw-bolder text-decoration-line-through">₹499</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <style>
+            .payment-price-details {
+                border-radius: 4px;
+                background-color: #fff;
+            }
+        </style>
+    </div>
+    </div>
+</body>
+
+</html>
